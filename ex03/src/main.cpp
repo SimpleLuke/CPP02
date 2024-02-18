@@ -6,7 +6,7 @@
 /*   By: llai <llai@student.42london.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 23:55:06 by llai              #+#    #+#             */
-/*   Updated: 2024/02/18 02:56:35 by llai             ###   ########.fr       */
+/*   Updated: 2024/02/18 12:28:49 by llai             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,20 @@ void testLargeTri()
   Point A(0, 0);
   Point B(1000, 2000);
   Point C(2000, 0);
-  Point P(1500, 1000);
+  Point P(1000, 1700);
 
   std::cout << "Test: LARGE" << std::endl;
+  printPointInTri(A, B, C, P);
+}
+
+void testVertex()
+{
+  Point A(0, 0);
+  Point B(1000, 2000);
+  Point C(2000, 0);
+  Point P(1000, 2000);
+
+  std::cout << "Test: VERTEX" << std::endl;
   printPointInTri(A, B, C, P);
 }
 
@@ -76,5 +87,6 @@ int main(void)
   testOutTri();
   testEdgeTri();
   testLargeTri();
+  testVertex();
   return 0;
 }
